@@ -6,62 +6,62 @@ import Svg from "@jasikpark/astro-svg-loader";
 changeLanguage("ro");
 
 const services = [
-    {
-        name: "General\u0103",
-        slug: "/generala",
-        class: "absolute top-4 right-5 h-24 opacity-20",
-        price: "-",
-        image: "bloom",
-    },
-    {
-        name: "Apartamente & Vile",
-        slug: "/apartamente-vile",
-        class: "absolute top-4 right-5 h-24 opacity-20",
-        price: "-",
-        image: "house",
-    },
-    {
-        name: "Societ\u0103\u021Bi & asocia\u021Bii",
-        slug: "/societati-asociatii",
-        class: "absolute top-4 right-5 h-24 opacity-20",
-        price: "-",
-        image: "buildings",
-    },
-    {
-        name: "Dup\u0103 constructor",
-        slug: "/dupa-constructor",
-        class: "absolute top-4 right-5 h-24 opacity-20",
-        price: "-",
-        image: "builder",
-    },
-    {
-        name: "Pardoseli & covoare",
-        slug: "/pardoseli-covoare",
-        class: "absolute top-4 right-5 h-24 opacity-20",
-        price: "-",
-        image: "floors",
-    },
-    {
-        name: "Exterioar\u0103",
-        slug: "/exterioara",
-        class: "absolute top-3 right-5 h-24 opacity-20",
-        price: "-",
-        image: "leaf",
-    },
-    {
-        name: "Tapi\u021B\u0103rie auto",
-        slug: "/tapitarie-auto",
-        class: "absolute top-9 right-5 h-16 opacity-20",
-        price: "-",
-        image: "car",
-    },
-    {
-        name: "Ecologic\u0103 cu aburi",
-        slug: "/ecologie-cu-aburi",
-        class: "absolute top-6 right-5 h-20 opacity-20",
-        price: "-",
-        image: "eco-steam",
-    },
+  {
+    name: "General\u0103",
+    slug: "/generala",
+    class: "absolute top-4 right-5 h-24 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/bloom.svg?raw`),
+  },
+  {
+    name: "Apartamente & Vile",
+    slug: "/apartamente-vile",
+    class: "absolute top-4 right-5 h-24 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/house.svg?raw`),
+  },
+  {
+    name: "Societ\u0103\u021Bi & asocia\u021Bii",
+    slug: "/societati-asociatii",
+    class: "absolute top-4 right-5 h-24 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/buildings.svg?raw`),
+  },
+  {
+    name: "Dup\u0103 constructor",
+    slug: "/dupa-constructor",
+    class: "absolute top-4 right-5 h-24 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/builder.svg?raw`),
+  },
+  {
+    name: "Pardoseli & covoare",
+    slug: "/pardoseli-covoare",
+    class: "absolute top-4 right-5 h-24 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/floors.svg?raw`),
+  },
+  {
+    name: "Exterioar\u0103",
+    slug: "/exterioara",
+    class: "absolute top-3 right-5 h-24 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/leaf.svg?raw`),
+  },
+  {
+    name: "Tapi\u021B\u0103rie auto",
+    slug: "/tapitarie-auto",
+    class: "absolute top-9 right-5 h-16 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/car.svg?raw`),
+  },
+  {
+    name: "Ecologic\u0103 cu aburi",
+    slug: "/ecologie-cu-aburi",
+    class: "absolute top-6 right-5 h-20 opacity-20",
+    price: "-",
+    image: import(`../assets/imgs/services/eco-steam.svg?raw`),
+  },
 ];
 ---
 
@@ -81,7 +81,7 @@ const services = [
                 <div class="group relative grid h-32 grid-cols-2 place-content-center rounded-lg bg-blue-500 p-8 text-white hover:bg-blue-600">
                   <h2 class="text-left text-2xl font-bold uppercase">{service.name}</h2>
                   <div />
-                  <Svg class={service.class} src={import(`../assets/imgs/services/${service.image}.svg?raw`)} />
+                  <Svg class={service.class} src={service.image} />
                 </div>
               </a>
             ))
