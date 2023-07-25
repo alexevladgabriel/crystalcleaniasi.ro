@@ -1,0 +1,34 @@
+---
+import Svg from "@jasikpark/astro-svg-loader";
+
+export interface Props {
+  index: number;
+  icon: string;
+  title: string;
+  body: string;
+}
+
+const { index, icon, title, body } = Astro.props;
+---
+
+<li class="group grid h-full place-items-center">
+  <div class="relative grid h-full place-items-center space-y-6 rounded-lg bg-white p-6 shadow-md">
+    <div class="absolute left-0 top-0 hidden rounded-tl-md bg-sky-500 py-2 px-4 text-white md:block">
+      {index}
+    </div>
+
+    <Svg src={import(/* @vite-ignore */ icon)} class="h-12 w-12 fill-current" />
+    <div class="space-y-2 text-lg">
+      <h3 class="font-bold">{title}</h3>
+      <p>{body}</p>
+    </div>
+  </div>
+  <Svg
+    src={import("../assets/imgs/arrow_down.svg?raw")}
+    class="group-last:hidden my-4 md:hidden h-6 w-6 fill-current"
+  />
+  <!-- <Svg
+    src={import("../assets/imgs/arrow_right.svg?raw")}
+    class="group-last:hidden hidden md:block h-16 w-16 fill-current"
+  /> -->
+</li>

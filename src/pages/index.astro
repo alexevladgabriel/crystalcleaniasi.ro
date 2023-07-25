@@ -1,0 +1,21 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Work from "../components/Work.astro";
+import WhyUS from "../components/WhyUS.astro";
+import Reviews from "../components/Reviews.astro";
+import CallUS from "../components/CallUS.astro";
+
+changeLanguage("ro");
+---
+
+<Layout title="Acasă">
+  <main>
+    <Hero />
+    <WhyUS />
+    <Work />
+    <Reviews />
+    <CallUS />
+  </main>
+</Layout>

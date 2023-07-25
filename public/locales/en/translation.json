@@ -1,0 +1,52 @@
+{
+  "header": {
+    "nav": {
+      "cleaning": "Cleaning",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Proffesional cleaning services for",
+    "description": "Cu o experiență de peste 9 ani în oferirea serviciilor de curațenie, avem un record impresionant de satisfacție a clienților de 98%. Suntem dedicați să oferim servicii de curățenie de cea mai înaltă calitate.",
+    "list": {
+      "apartament": "your apartament",
+      "car": "your car",
+      "carpet": "your carpet",
+      "garden": "your garden",
+      "office": "your office",
+      "house": "your house",
+      "commercial": "your commercial space"
+    }
+  },
+
+  "whyus": {
+    "subtitle": "De ce să ne alegi pe noi?",
+    "title": "<0>Firmă profesională</0><br /> de curățenie în Iași",
+    "description": "CrystalClean este o companie de curățenie de încredere, care oferă servicii profesionale de înaltă calitate pentru toate tipurile de medii, de la birouri și clădiri comerciale la case particulare și apartamente. De ce ar trebui să alegeți serviciile noastre de curățenie în locul altora? Iată câteva motive:",
+    "list": {
+      "first": {
+        "title": "Personalizarea serviciilor",
+        "description": "Servicii personalizate pentru a satisface nevoile fiecărui client."
+      },
+      "second": {
+        "title": "Personalul nostru",
+        "description": "Personal calificat și bine pregătit pentru curățenie de înaltă calitate."
+      },
+      "third": {
+        "title": "Produsele și echipamentele noastre",
+        "description": "Utilizarea celor mai bune produse și echipamente de curățenie."
+      },
+      "fourth": {
+        "title": "Flexibilitate",
+        "description": "Programare flexibilă pentru a se adapta la nevoile clienților."
+      },
+      "fifth": {
+        "title": "Servicii complete",
+        "description": "Gama completă de servicii de curățenie pentru toate nevoile."
+      }
+    }
+  },
+
+  "common": {}
+}

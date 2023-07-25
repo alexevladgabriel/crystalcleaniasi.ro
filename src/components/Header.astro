@@ -1,0 +1,17 @@
+---
+import Navbar from "./svelte/Navbar.svelte";
+const path = new URL(Astro.request.url).pathname;
+
+const links = [
+  { name: "Curățenie", slug: "/curatenie" },
+  { name: "Portfoliu", slug: "/portfoliu" },
+  // { name: "Parteneri", slug: "/parteneri" },
+  // { name: "Oferte", slug: "/oferte" },
+  // { name: "Blog", slug: "/blog" },
+];
+---
+
+<!-- container max-w-4xl rounded-md p-12 sm:mt-10 md:mx-auto -->
+<header class="px-6 pt-6 lg:px-8">
+  <Navbar path={path} links={links} client:visible />
+</header>

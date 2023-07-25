@@ -1,0 +1,107 @@
+---
+import Svg from "@jasikpark/astro-svg-loader";
+import { t } from "i18next";
+
+const reviews = [
+  {
+    id: 1,
+    client: {
+      name: "Elena Popescu",
+      city: "Valea Lupului, Iași",
+      avatar: "https://www.aquacleaning.ro/wp-content/uploads/2019/07/testimonial2.jpg",
+    },
+    rating: 5,
+    text: "Serviciile de curățenie ale CrystalClean sunt excelente! Personalul lor este bine pregătit și foarte profesionist. Îmi place că pot să programez o curățenie când am nevoie, iar rezultatele sunt întotdeauna impresionante.",
+  },
+  {
+    id: 2,
+    client: {
+      name: "Andrei Ionescu",
+      city: "Iași",
+    },
+    rating: 5,
+    text: "Am folosit serviciile CrystalClean pentru o curățenie după renovare și au făcut o treabă fantastică. Echipa lor a fost punctuală, atentă și am fost impresionat de calitatea produselor și echipamentelor folosite.",
+  },
+  {
+    id: 3,
+    client: {
+      name: "Ioana Stoica",
+      city: "Bârnova, Iași",
+    },
+    rating: 5,
+    text: "Am fost foarte mulțumită de curățenia generală efectuată de CrystalClean. Personalul lor a făcut o treabă excelentă, iar programul flexibil a făcut totul mult mai ușor pentru mine. Cu siguranță îi voi recomanda.",
+  },
+  {
+    id: 4,
+    client: {
+      name: "Alexandru Mihai",
+      city: "Iași",
+    },
+    rating: 5,
+    text: "Am fost foarte mulțumit de serviciile CrystalClean, au făcut o treabă excelentă la biroul meu. Personalul lor este profesionist și eficient, iar serviciile lor personalizate au fost exact ceea ce am avut nevoie.",
+  },
+  {
+    id: 5,
+    client: {
+      name: "Maria Popa",
+      city: "Miroslava, Iași",
+    },
+    rating: 5,
+    text: "Sunt foarte mulțumită de serviciile CrystalClean, au făcut o treabă excelentă la curățenia mea de primăvară. Echipa lor a fost punctuală și atentă la detalii, iar serviciile lor complete m-au impresionat.",
+  },
+  {
+    id: 6,
+    client: {
+      name: "Florin Manea",
+      city: "Iași",
+    },
+    rating: 5,
+    text: "Recomand cu încredere serviciile CrystalClean. Echipa lor a făcut o treabă excelentă la apartamentul meu și am fost impresionat de calitatea produselor și echipamentelor folosite. Serviciile lor personalizate sunt excelente!",
+  },
+];
+---
+
+<section class="relative mx-auto mt-12 bg-gray-50 py-12 px-6 text-gray-900 md:px-20 md:py-24 lg:mt-24 lg:px-24">
+  <div
+    class="absolute inset-0 bg-[url(assets/imgs/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+  >
+  </div>
+  <div class="relative text-center">
+    <h2 class="text-3xl font-bold">{t("reviews.title")}</h2>
+    <p class="mt-2 text-lg">
+      {t("reviews.description")}
+    </p>
+  </div>
+  <ul class="relative mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
+    {
+      reviews.map(({ client, rating, text }) => (
+        <li class="group border-2 bg-white p-8 transition-all duration-150 hover:border-2 hover:border-amber-500 md:p-12">
+          <div class="flex items-center space-x-4">
+            {client.avatar ? (
+              <img src={client.avatar} class="h-12 w-12 rounded-full" />
+            ) : (
+              <Svg src={import("../assets/imgs/avatar.svg?raw")} class="h-12 w-12" />
+            )}
+            <div>
+              <p class="font-bold group-hover:text-amber-500 group-hover:transition-colors group-hover:duration-300">
+                {client.name}
+              </p>
+              <span class="block">{client.city}</span>
+            </div>
+          </div>
+          <div>
+            <div class="my-6 flex justify-center font-bold">
+              {Array.from({ length: rating }).map((_) => (
+                <Svg src={import("../assets/imgs/stars/full.svg?raw")} class="ml-2 h-6 w-6 fill-amber-400" />
+              ))}
+              {Array.from({ length: 5 - rating }).map((_) => (
+                <Svg src={import("../assets/imgs/stars/empty.svg?raw")} class="ml-2 h-6 w-6 fill-amber-400" />
+              ))}
+            </div>
+            <p class="mt-4 text-justify indent-4">{text}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>

@@ -1,0 +1,53 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("en");
+---
+
+<Layout title="Contact">
+  <main class="relative">
+    <section class="mx-auto sm:max-w-7xl">
+      <div class="mt-16 rounded-lg bg-sky-200 p-8 text-sky-900">
+        <h1 class="text-3xl font-semibold">Contact</h1>
+        <p>Vrei sa lucrezi cu noi?</p>
+      </div>
+      <div class="mt-8 bg-gray-100 p-4">
+        <form class="grid max-w-2xl grid-cols-1 gap-2">
+          <select
+            class="rounded-md border-2 border-gray-200 bg-white py-2 pl-3 pr-10 transition-colors focus:border-sky-500 focus:outline-none"
+          >
+            <option value="help">Cum te putem ajuta?</option>
+            <option value="question">Am o întrebare</option>
+            <option value="review">Vreau să las un review</option>
+            <option value="job">Sunt interesant de un job</option>
+          </select>
+          <input
+            class="rounded-md border-2 border-gray-200 py-2 pl-3 pr-10 transition-colors focus:border-sky-500 focus:outline-none"
+            name="name"
+            placeholder="Nume"
+            required
+          />
+          <input
+            class="rounded-md border-2 border-gray-200 py-2 pl-3 pr-10 transition-colors focus:border-sky-500 focus:outline-none"
+            name="phone"
+            placeholder="Telefon"
+          />
+          <input
+            class="rounded-md border-2 border-gray-200 py-2 pl-3 pr-10 transition-colors focus:border-sky-500 focus:outline-none"
+            name="email"
+            placeholder="Email"
+          />
+          <textarea
+            class="rounded-md border-2 border-gray-200 py-2 pl-3 pr-10 transition-colors focus:border-sky-500 focus:outline-none"
+            name="message"
+            placeholder="Mesaj"
+            rows="6"></textarea>
+          <button type="submit" class="rounded-md bg-sky-400 px-2 py-3 text-base font-extrabold text-white"
+            >Submit</button
+          >
+        </form>
+      </div>
+    </section>
+  </main>
+</Layout>

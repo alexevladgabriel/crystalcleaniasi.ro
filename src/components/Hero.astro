@@ -1,0 +1,94 @@
+---
+import Svg from "@jasikpark/astro-svg-loader";
+import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
+
+const { CCI_PHONE } = import.meta.env;
+const years = new Date().getFullYear() - 2014;
+---
+
+<section class="relativepx-6 lg:px-8">
+  <div class="relative mx-auto max-w-sm py-32 sm:max-w-[34rem] sm:py-48 lg:py-56">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        {t("hero.title")}
+        <span
+          data-messages={[
+            t("hero.list.apartament"),
+            t("hero.list.car"),
+            t("hero.list.carpet"),
+            t("hero.list.garden"),
+            t("hero.list.office"),
+            t("hero.list.commercial"),
+          ]}
+          id="typed"
+          class="border-b-4 border-amber-500">{t("hero.list.apartament")}</span
+        >
+      </h1>
+      <p class="mt-6 text-xl leading-8 text-gray-600">
+        <Trans i18nKey="hero.subtitle" />
+        Cu o experiență de peste {years} ani în oferirea serviciilor de curațenie, avem un record impresionant de satisfacție
+        a clienților de 98%. Suntem dedicați să oferim servicii de curățenie de cea mai înaltă calitate.
+        <!-- Oferim servicii de curatenie de peste 7 ani. 98% din clientii nostri sunt multumiti de serviciile noastre. -->
+        <!-- More than five years of providing home cleaning services. 98% of our customers are satisfied with our
+          services. -->
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a
+          href={`tel:${CCI_PHONE}`}
+          class="flex items-center rounded-md bg-amber-400 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+        >
+          <Svg src={import("../assets/imgs/phone.svg?raw")} class="w-4 h-4 inline-block fill-white mr-2" />
+          {t("common.phone")}</a
+        >
+        <a href="#cum-functioneaza" class="space-x-2 text-base font-semibold leading-7 text-gray-900">
+          <Svg src={import("../assets/imgs/eye.svg?raw")} class="w-4 h-4 inline-block fill-gray-900 mr-2" />
+          {t("hero.see_more")}<span aria-hidden="true">→</span></a
+        >
+      </div>
+    </div>
+    <!-- <div class="absolute bottom-96 -right-24 h-16 w-16 rounded-full border-4 border-blue-500">
+      <div class="absolute -top-2 right-9 h-8 w-8 rounded-full border-4 border-blue-500 bg-blue-200"></div>
+    </div>
+    <div class="absolute -left-16 h-16 w-16 rounded-full border-4 border-blue-500">
+      <div class="absolute -bottom-2 left-9 h-8 w-8 rounded-full border-4 border-blue-500 bg-blue-200"></div>
+    </div>
+    <div class="absolute top-16 left-16 h-16 w-16 rounded-full border-4 border-blue-500">
+      <div class="absolute -top-2 left-9 h-8 w-8 rounded-full border-4 border-blue-500 bg-blue-200"></div>
+    </div>
+    <div class="absolute top-40 -left-64 h-16 w-16 rounded-full border-4 border-blue-500">
+      <div class="absolute -top-2 left-9 h-8 w-8 rounded-full border-4 border-blue-500 bg-blue-200"></div>
+    </div>
+    <div class="absolute top-32 right-16 h-16 w-16 rounded-full border-4 border-blue-500">
+      <div class="absolute -top-2 left-9 h-8 w-8 rounded-full border-4 border-blue-500 bg-blue-200"></div>
+    </div>
+    <div class="absolute bottom-14 right-24 h-16 w-16 rounded-full border-4 border-blue-500">
+      <div class="absolute -top-2 left-9 h-8 w-8 rounded-full border-4 border-blue-500 bg-blue-200"></div>
+    </div> -->
+  </div>
+</section>
+
+<style is:global>
+  .typed-cursor {
+    @apply text-amber-500;
+  }
+</style>
+
+<script>
+  import Typed from "typed.js";
+
+  const el = document.getElementById("typed");
+  const strings = el?.dataset.messages!.split(",") || [];
+
+  new Typed("#typed", {
+    strings,
+    typeSpeed: 100,
+    backSpeed: 100,
+    smartBackspace: true,
+    fadeOut: true,
+    fadeOutDelay: 200,
+    showCursor: true,
+    cursorChar: "_",
+    loop: true,
+  });
+</script>

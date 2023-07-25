@@ -1,0 +1,78 @@
+---
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
+import Svg from "@jasikpark/astro-svg-loader";
+
+const benefits = [
+  {
+    title: "whyus.list.first.title",
+    description: "whyus.list.first.description",
+  },
+  {
+    title: "whyus.list.second.title",
+    description: "whyus.list.second.description",
+  },
+  {
+    title: "whyus.list.third.title",
+    description: "whyus.list.third.description",
+  },
+  {
+    title: "whyus.list.fourth.title",
+    description: "whyus.list.fourth.description",
+  },
+  {
+    title: "whyus.list.fifth.title",
+    description: "whyus.list.fifth.description",
+  },
+];
+---
+
+<section class="bg-gray-100/50 p-2 md:p-0 lg:p-16">
+  <main class="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
+    <div class="p-6">
+      <div class="flex flex-col">
+        <p class="text-xl font-semibold text-sky-500">{t("whyus.subtitle")}</p>
+        <h2 class="mt-2 max-w-sm text-3xl">
+          <Trans i18nKey="whyus.title">
+            <span class="font-bold">Firmă profesională</span> de curățenie în Iași
+          </Trans>
+        </h2>
+        <div class="mt-6">
+          <p class="text-justify">
+            {t("whyus.description")}
+          </p>
+        </div>
+        <ul class="mt-4">
+          {
+            benefits.map((item) => (
+              <li class="mt-4 flex">
+                <Svg src={import("../assets/imgs/circle-check.svg?raw")} class="mr-4 h-8 w-8 fill-sky-500" />
+                <div class="flex flex-col">
+                  <p class="text-2xl font-bold text-sky-500">{t(item.title)}</p>
+                  <span class="text-lg">{t(item.description)}</span>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="relative">
+      <img
+        class="absolute top-10 left-10 z-30 hidden h-56 rounded-lg md:block"
+        src="assets/imgs/cleaning_woman_3.jpg"
+      />
+      <img
+        class="absolute -right-10 bottom-0 z-50 hidden rounded-lg md:top-56 md:block md:h-56 lg:top-40 lg:h-64"
+        src="assets/imgs/cleaning_woman_2.jpg"
+      />
+      <img
+        class="absolute bottom-10 left-10 z-20 hidden h-56 rounded-lg md:block"
+        src="assets/imgs/cleaning_woman_1.jpg"
+      />
+      <div class="mt-0 flex justify-center p-6 md:hidden">
+        <img src="assets/imgs/cleaning_woman_2.jpg" alt="test" class="rounded-lg" />
+      </div>
+    </div>
+  </main>
+</section>

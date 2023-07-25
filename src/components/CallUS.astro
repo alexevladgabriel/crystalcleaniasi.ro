@@ -1,0 +1,24 @@
+---
+import Svg from "@jasikpark/astro-svg-loader";
+import { t } from "i18next";
+
+const { CCI_PHONE } = import.meta.env;
+---
+
+<section class="relative bg-blue-500 py-12 px-6 text-white md:px-20 md:py-24 lg:px-24">
+  <div class="mx-auto max-w-7xl items-center md:flex">
+    <div class="flex-1">
+      <p class="text-3xl font-bold">{t("call_us.title")}</p>
+      <span class="mt-2 block text-lg md:mt-0">{t("call_us.description")}</span>
+    </div>
+    <div class="mt-6">
+      <a
+        href={`tel:${CCI_PHONE}`}
+        class="items-center rounded-md bg-yellow-500 px-3.5 py-1.5 text-base font-bold leading-7 text-white shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400 md:mt-0 md:flex"
+      >
+        <Svg src={import("../assets/imgs/phone.svg?raw")} class="w-4 h-4 inline-block fill-white mr-2" />
+        {t("call_us.phone")}</a
+      >
+    </div>
+  </div>
+</section>

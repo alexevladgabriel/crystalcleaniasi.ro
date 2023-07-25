@@ -1,0 +1,56 @@
+---
+import { LanguageSelector } from "astro-i18next/components";
+import Svg from "@jasikpark/astro-svg-loader";
+const Facebook = import("../assets/imgs/facebook.svg?raw");
+const Instagram = import("../assets/imgs/instagram.svg?raw");
+
+const links = [
+  { name: "Curatenie", href: "/curatenie" },
+  { name: "Portfoliu", href: "/portfoliu" },
+  // { name: "Parteneri", href: "/parteneri" },
+  // { name: "Oferte", href: "/oferte" },
+  // { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" },
+  { name: "ANPC", href: "https://anpc.ro" },
+];
+
+const socials = [
+  { name: "Facebook", icon: Facebook, href: import.meta.env.CCI_FACEBOOK },
+  { name: "Instagram", icon: Instagram, href: import.meta.env.CCI_INSTAGRAM },
+];
+const { CCI_NAME, CCI_YEAR } = import.meta.env;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-200">
+  <div class="container mx-auto max-w-4xl space-y-4 p-6">
+    <div class="grid grid-cols-2 gap-4 sm:flex sm:justify-center md:space-x-6">
+      {
+        links.map((link) => (
+          <a rel="prefetch" href={link.href} class="text-gray-500 hover:text-gray-800">
+            {link.name}
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex sm:justify-center">
+      {
+        socials.map((social) => (
+          <a href={social.href} class="mr-6 py-2 md:mr-0 md:px-3" target="_blank">
+            <Svg class="h-6 w-6 fill-gray-400 hover:fill-gray-600" src={social.icon} />
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex sm:justify-center">
+      <LanguageSelector showFlag class="appearance-none border-2 border-gray-300 px-3 py-1.5 rounded-md" />
+    </div>
+    <div class="text-left sm:text-center">
+      <p class="text-sm font-bold text-gray-500">
+        &copy; {CCI_YEAR}-{currentYear}
+        {CCI_NAME}
+      </p>
+      <p class="text-gray-400">Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>

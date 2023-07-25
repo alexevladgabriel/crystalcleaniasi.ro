@@ -1,0 +1,51 @@
+---
+import { t } from "i18next";
+import Card from "./Card.astro";
+
+const works = [
+  {
+    icon: "../assets/imgs/price_quote.svg?raw",
+    title: t("work.list.first.title"),
+    body: t("work.list.first.description"),
+  },
+  {
+    icon: "../assets/imgs/calendar.svg?raw",
+    title: t("work.list.second.title"),
+    body: t("work.list.second.description"),
+  },
+  {
+    icon: "../assets/imgs/smile.svg?raw",
+    title: t("work.list.third.title"),
+    body: t("work.list.third.description"),
+  },
+];
+---
+
+<section id="cum-functioneaza" class="relative mx-4 mt-12 text-sky-900 lg:mx-24 lg:mt-24">
+  <div class="rounded-lg bg-sky-200 p-4 pb-6">
+    <div class="mt-4 text-center">
+      <h2 class="text-3xl font-bold">Cum funcționează?</h2>
+      <p class="mt-4 text-lg">
+        <span>Vom curăța locuința ta săptămânal, la fiecare două săptămâni sau la fiecare trei săptămâni.</span>
+        <span class="md:block">
+          Toate planurile noastre includ servicii de deplasare la un preț accesibil sau gratis în zona urbană a orașului
+          Iași.
+        </span>
+      </p>
+    </div>
+    <ol
+      class="relative mt-8 grid place-items-center space-y-4 text-center md:mt-12 md:grid-cols-3 md:gap-4 md:space-y-0 lg:mx-auto lg:max-w-6xl"
+    >
+      {works.map(({ icon, title, body }, index) => <Card index={index + 1} icon={icon} title={title} body={body} />)}
+    </ol>
+  </div>
+
+  <div class="mt-12 flex justify-center">
+    <a href="/curatenie" rel="prefetch">
+      <button
+        class="rounded-lg border border-amber-500 px-4 py-2 font-bold text-amber-500 transition-colors duration-500 hover:bg-amber-500 hover:text-white"
+        >{t("work.discover")}</button
+      >
+    </a>
+  </div>
+</section>

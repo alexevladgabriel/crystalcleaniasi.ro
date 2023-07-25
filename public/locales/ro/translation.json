@@ -1,0 +1,87 @@
+{
+  "header": {
+    "nav": {
+      "cleaning": "Curatenie",
+      "portfolio": "Portfoliu",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Servicii profesionale de curățenie pentru",
+    "description": "Cu o experiență de peste 9 ani în oferirea serviciilor de curațenie, avem un record impresionant de satisfacție a clienților de 98%. Suntem dedicați să oferim servicii de curățenie de cea mai înaltă calitate.",
+    "list": {
+      "apartament": "apartamentul tău",
+      "car": "mașina ta",
+      "carpet": "covorul tău",
+      "garden": "grădina ta",
+      "office": "societatea ta",
+      "house": "your house",
+      "commercial": "asociații de locatari"
+    },
+    "see_more": "Vezi mai mult"
+  },
+
+  "whyus": {
+    "subtitle": "De ce să ne alegi pe noi?",
+    "title": "<0>Firmă profesională</0><br /> de curățenie în Iași",
+    "description": "CrystalClean este o companie de curățenie de încredere, care oferă servicii profesionale de înaltă calitate pentru toate tipurile de medii, de la birouri și clădiri comerciale la case particulare și apartamente. De ce ar trebui să alegeți serviciile noastre de curățenie în locul altora? Iată câteva motive:",
+    "list": {
+      "first": {
+        "title": "Personalizarea serviciilor",
+        "description": "Servicii personalizate pentru a satisface nevoile fiecărui client."
+      },
+      "second": {
+        "title": "Personalul nostru",
+        "description": "Personal calificat și bine pregătit pentru curățenie de înaltă calitate."
+      },
+      "third": {
+        "title": "Produsele și echipamentele noastre",
+        "description": "Utilizarea celor mai bune produse și echipamente de curățenie."
+      },
+      "fourth": {
+        "title": "Flexibilitate",
+        "description": "Programare flexibilă pentru a se adapta la nevoile clienților."
+      },
+      "fifth": {
+        "title": "Servicii complete",
+        "description": "Gama completă de servicii de curățenie pentru toate nevoile."
+      }
+    }
+  },
+
+  "work": {
+    "title": "Cum funcționează?",
+    "description": "Vom curăța locuința ta săptămânal, la fiecare două săptămâni sau la fiecare trei săptămâni. Toate planurile noastre includ servicii de deplasare la un preț accesibil sau gratis în zona urbană a orașului Iași.",
+    "list": {
+      "first": {
+        "title": "Obține un preț.",
+        "description": "Povestește-ne despre tine, despre locuința ta și despre cerințele tale de curățenie"
+      },
+      "second": {
+        "title": "Rezervă.",
+        "description": "Vom face locuința ta să strălucească și vom face toate cerințele pe care le dorești."
+      },
+      "third": {
+        "title": "Respiră, zămbește, relaxează-te.",
+        "description": "Locuința este curată, serviciile au fost realizate. E timpul să te bucuri de prospețimea curățeniei."
+      }
+    },
+    "discover": "Descopera serviciile noastre"
+  },
+
+  "reviews": {
+    "title": "Află ce spun clienții noștri despre noi?",
+    "description": "Am ajutat ieșenii să-și facă locuințele curate, strălucitoare, iar acestea sunt opiniile lor."
+  },
+  "call_us": {
+    "title": "Ai rămas cu întrebări?",
+    "description": "Iți vom răspunde telefonic la orice nelămurire ți-a rămas.",
+    "phone": "Apelați acum"
+  },
+
+  "footer": {},
+  "common": {
+    "phone": "Apelați acum",
+    "copyrights": "Toate drepturile rezervate"
+  }
+}
