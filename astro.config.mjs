@@ -16,5 +16,9 @@ export default defineConfig({
   output: "server",
   adapter: vercel({
     analytics: true,
+    includeFiles: [
+      "./public/locales/en/translation.json", 
+      "./public/locales/ro/translation.json"
+    ],
   }),
 });
