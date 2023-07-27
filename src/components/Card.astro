@@ -3,7 +3,7 @@ import Svg from "@jasikpark/astro-svg-loader";
 
 export interface Props {
   index: number;
-  icon: string;
+  icon: Promise<typeof import("*?raw")>;
   title: string;
   body: string;
 }
