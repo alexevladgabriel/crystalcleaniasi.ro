@@ -1,20 +1,22 @@
 ---
 import { t } from "i18next";
+import { localizePath } from "astro-i18next";
 import Card from "./Card.astro";
+import { Trans } from "astro-i18next/components";
 
 const works = [
   {
-    icon: "assets/imgs/price_quote.svg?raw",
+    icon: import("../assets/imgs/price_quote.svg?raw"),
     title: t("work.list.first.title"),
     body: t("work.list.first.description"),
   },
   {
-    icon: "assets/imgs/calendar.svg?raw",
+    icon: import("../assets/imgs/calendar.svg?raw"),
     title: t("work.list.second.title"),
     body: t("work.list.second.description"),
   },
   {
-    icon: "assets/imgs/smile.svg?raw",
+    icon: import("../assets/imgs/smile.svg?raw"),
     title: t("work.list.third.title"),
     body: t("work.list.third.description"),
   },
@@ -24,13 +26,15 @@ const works = [
 <section id="cum-functioneaza" class="relative mx-4 mt-12 text-sky-900 lg:mx-24 lg:mt-24">
   <div class="rounded-lg bg-sky-200 p-4 pb-6">
     <div class="mt-4 text-center">
-      <h2 class="text-3xl font-bold">Cum funcționează?</h2>
+      <h2 class="text-3xl font-bold">{t('work.title')}</h2>
       <p class="mt-4 text-lg">
-        <span>Vom curăța locuința ta săptămânal, la fiecare două săptămâni sau la fiecare trei săptămâni.</span>
-        <span class="md:block">
-          Toate planurile noastre includ servicii de deplasare la un preț accesibil sau gratis în zona urbană a orașului
-          Iași.
-        </span>
+        <Trans i18nKey='work.description'>
+          <span>Vom curăța locuința ta săptămânal, la fiecare două săptămâni sau la fiecare trei săptămâni.</span>
+          <span class="md:block">
+            Toate planurile noastre includ servicii de deplasare la un preț accesibil sau gratis în zona urbană a orașului
+            Iași.
+          </span>
+        </Trans>
       </p>
     </div>
     <ol
@@ -41,7 +45,7 @@ const works = [
   </div>
 
   <div class="mt-12 flex justify-center">
-    <a href="/curatenie" rel="prefetch">
+    <a href={localizePath("/curatenie")} rel="prefetch">
       <button
         class="rounded-lg border border-amber-500 px-4 py-2 font-bold text-amber-500 transition-colors duration-500 hover:bg-amber-500 hover:text-white"
         >{t("work.discover")}</button

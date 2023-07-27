@@ -1,10 +1,12 @@
 ---
+import { t } from "i18next";
+import { localizePath } from "astro-i18next";
 import Navbar from "./svelte/Navbar.svelte";
 const path = new URL(Astro.request.url).pathname;
 
 const links = [
-  { name: "Curățenie", slug: "/curatenie" },
-  { name: "Portfoliu", slug: "/portfoliu" },
+  { name: t('header.nav.cleaning'), slug: localizePath('/curatenie')  },
+  { name: t('header.nav.portfolio'), slug: localizePath('/portfoliu') },
   // { name: "Parteneri", slug: "/parteneri" },
   // { name: "Oferte", slug: "/oferte" },
   // { name: "Blog", slug: "/blog" },
@@ -13,5 +15,5 @@ const links = [
 
 <!-- container max-w-4xl rounded-md p-12 sm:mt-10 md:mx-auto -->
 <header class="px-6 pt-6 lg:px-8">
-  <Navbar path={path} links={links} client:visible />
+  <Navbar path={path} links={links} phone={import.meta.env.CCI_PHONE} cta={t("header.nav.cta")} client:visible />
 </header>

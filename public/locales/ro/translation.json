@@ -1,9 +1,10 @@
 {
   "header": {
     "nav": {
-      "cleaning": "Curatenie",
+      "cleaning": "Curățenie",
       "portfolio": "Portfoliu",
-      "contact": "Contact"
+      "contact": "Contact",
+      "cta": "Contactează-ne"
     }
   },
   "hero": {
@@ -51,7 +52,7 @@
 
   "work": {
     "title": "Cum funcționează?",
-    "description": "Vom curăța locuința ta săptămânal, la fiecare două săptămâni sau la fiecare trei săptămâni. Toate planurile noastre includ servicii de deplasare la un preț accesibil sau gratis în zona urbană a orașului Iași.",
+    "description": "<0>Vom curăța locuința ta săptămânal, la fiecare două săptămâni sau la fiecare trei săptămâni.</0> <1>Toate planurile noastre includ servicii de deplasare la un preț accesibil sau gratis în zona urbană a orașului Iași.</1>",
     "list": {
       "first": {
         "title": "Obține un preț.",
@@ -79,9 +80,10 @@
     "phone": "Apelați acum"
   },
 
-  "footer": {},
+  "footer": {
+    "copyrights": "Toate drepturile rezervate."
+  },
   "common": {
-    "phone": "Apelați acum",
-    "copyrights": "Toate drepturile rezervate"
+    "phone": "Apelați acum"
   }
 }

@@ -3,11 +3,12 @@
     "nav": {
       "cleaning": "Cleaning",
       "portfolio": "Portfolio",
-      "contact": "Contact"
+      "contact": "Contact",
+      "cta": "Contact us"
     }
   },
   "hero": {
-    "title": "Proffesional cleaning services for",
+    "title": "Professional cleaning services for",
     "description": "Cu o experiență de peste 9 ani în oferirea serviciilor de curațenie, avem un record impresionant de satisfacție a clienților de 98%. Suntem dedicați să oferim servicii de curățenie de cea mai înaltă calitate.",
     "list": {
       "apartament": "your apartament",
@@ -21,32 +22,37 @@
   },
 
   "whyus": {
-    "subtitle": "De ce să ne alegi pe noi?",
-    "title": "<0>Firmă profesională</0><br /> de curățenie în Iași",
-    "description": "CrystalClean este o companie de curățenie de încredere, care oferă servicii profesionale de înaltă calitate pentru toate tipurile de medii, de la birouri și clădiri comerciale la case particulare și apartamente. De ce ar trebui să alegeți serviciile noastre de curățenie în locul altora? Iată câteva motive:",
+    "subtitle": "Why choose us?",
+    "title": "<0>Professional company </0><br /> of cleaning in Iasi",
+    "description": "CrystalClean is a trusted cleaning company that provides high quality professional services for all types of environments, from offices and commercial buildings to private homes and apartments. Why should you choose our cleaning services over others? Here are some reasons:",
     "list": {
       "first": {
-        "title": "Personalizarea serviciilor",
-        "description": "Servicii personalizate pentru a satisface nevoile fiecărui client."
+        "title": "Personalization of services",
+        "description": "Personalized services to meet the needs of each client."
       },
       "second": {
-        "title": "Personalul nostru",
-        "description": "Personal calificat și bine pregătit pentru curățenie de înaltă calitate."
+        "title": "Our staff",
+        "description": "Qualified and well trained staff for high quality cleaning."
       },
       "third": {
-        "title": "Produsele și echipamentele noastre",
-        "description": "Utilizarea celor mai bune produse și echipamente de curățenie."
+        "title": "Our products and equipment",
+        "description": "Using the best cleaning products and equipment."
       },
       "fourth": {
-        "title": "Flexibilitate",
-        "description": "Programare flexibilă pentru a se adapta la nevoile clienților."
+        "title": "Flexibility",
+        "description": "Flexible scheduling to accommodate customer needs."
       },
       "fifth": {
-        "title": "Servicii complete",
-        "description": "Gama completă de servicii de curățenie pentru toate nevoile."
+        "title": "Full services",
+        "description": "The full range of cleaning services for all needs."
       }
     }
   },
 
-  "common": {}
+  "footer": {
+    "copyrights": "All rights reserved."
+  },
+  "common": {
+    "phone": "Call now"
+  }
 }

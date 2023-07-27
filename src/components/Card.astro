@@ -17,7 +17,7 @@ const { index, icon, title, body } = Astro.props;
       {index}
     </div>
 
-    <img src={icon} class="h-12 w-12 fill-current" />
+    <Svg src={icon} class="h-12 w-12 fill-current" />
     <div class="space-y-2 text-lg">
       <h3 class="font-bold">{title}</h3>
       <p>{body}</p>

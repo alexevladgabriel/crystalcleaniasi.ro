@@ -1,16 +1,18 @@
 ---
 import { LanguageSelector } from "astro-i18next/components";
 import Svg from "@jasikpark/astro-svg-loader";
+import { t } from "i18next";
+import { localizePath } from "astro-i18next";
 const Facebook = import("../assets/imgs/facebook.svg?raw");
 const Instagram = import("../assets/imgs/instagram.svg?raw");
 
 const links = [
-  { name: "Curatenie", href: "/curatenie" },
-  { name: "Portfoliu", href: "/portfoliu" },
+  { name: t('header.nav.cleaning'), href: localizePath('/curatenie') },
+  { name: t('header.nav.portfolio'), href: localizePath('/portfoliu') },
   // { name: "Parteneri", href: "/parteneri" },
   // { name: "Oferte", href: "/oferte" },
   // { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
+  { name: t('header.nav.contact'), href: localizePath('/contact') },
   { name: "ANPC", href: "https://anpc.ro" },
 ];
 
@@ -50,7 +52,7 @@ const currentYear = new Date().getFullYear();
         &copy; {CCI_YEAR}-{currentYear}
         {CCI_NAME}
       </p>
-      <p class="text-gray-400">Toate drepturile rezervate.</p>
+      <p class="text-gray-400">{t('footer.copyrights')}</p>
     </div>
   </div>
 </footer>
