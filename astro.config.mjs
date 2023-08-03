@@ -8,17 +8,13 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  server: {
-    port: 80,
-    host: true
-  },
   integrations: [tailwind(), prefetch(), svelte(), image(), astroI18next()],
-  output: "server",
-  adapter: vercel({
-    analytics: true,
-    includeFiles: [
-      "./public/locales/en/translation.json", 
-      "./public/locales/ro/translation.json"
-    ],
-  }),
+  output: "static",
+  // adapter: vercel({
+  //   analytics: true,
+  //   includeFiles: [
+  //     "./public/locales/en/translation.json", 
+  //     "./public/locales/ro/translation.json"
+  //   ],
+  // }),
 });

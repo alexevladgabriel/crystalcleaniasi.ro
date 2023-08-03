@@ -49,6 +49,9 @@ dependencies:
   photoswipe:
     specifier: ^5.3.8
     version: 5.3.8
+  pnpm:
+    specifier: ^8.6.11
+    version: 8.6.11
   svelte:
     specifier: ^3.59.2
     version: 3.59.2
@@ -3613,6 +3616,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: false
+
+  /pnpm@8.6.11:
+    resolution: {integrity: sha512-jqknppuj45tDzJsLcLqkAxytBHZXIx9JTYkGNq0/7pSRggpio9wRxTDj4NA2ilOHPlJ5BVjB5Ij5dx65woMi5A==}
+    engines: {node: '>=16.14'}
+    hasBin: true
     dev: false
 
   /postcss-import@15.1.0(postcss@8.4.27):
